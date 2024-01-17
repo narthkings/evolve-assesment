@@ -1,26 +1,40 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { useEffect, useState } from "react";
+import parseJsonToReact from "./method";
 
-function App() {
+export default function App() {
+  const [reactElement, setReactElement] = useState(null);
+
+  const fetchJsonReact = async (params: string) => {
+    try {
+      const res = await fetch(params);
+      const json = await res.json();
+
+      // had to loop through rootNodes to filter which is not the parent so as to not hardcode "ROOT" value🚀
+      const rootNodes = Object.keys(json.record).filter(
+        (nodeId) => !json.record[nodeId].parent
+      );
+      // here you'd get an array ["ROOT"] which you can then dynamically pass into parseJsonToReact
+      const rootElements = rootNodes.map((rootNodeId) =>
+        parseJsonToReact(json, rootNodeId)
+      );
+      // voila 🔥⚡️  you store it in a state and render on the JSX
+      setReactElement(rootElements);
+    } catch (error) {
+      console.error("Error fetching or parsing JSON:", error);
+    }
+  };
+
+  useEffect(() => {
+    const apiUrl = "https://api.jsonbin.io/v3/b/6571ff4e12a5d37659a4856a";
+    fetchJsonReact(apiUrl);
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Hello CodeSandbox</h1>
+      <h2>Start editing to see some magic happen!</h2>
+      <div>{reactElement}</div>
     </div>
   );
 }
-
-export default App;

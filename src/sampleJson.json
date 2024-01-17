@@ -1,0 +1,109 @@
+ {
+  "record": {
+    "ROOT": {
+      "type": {"resolvedName": "Container"},
+      "isCanvas": true,
+      "props": {"id": "root"},
+      "displayName": "Container",
+      "custom": {},
+      "hidden": false,
+      "nodes": ["4ywPwVlpRx", "7x2Ojp2mEO"],
+      "linkedNodes": {}
+    },
+    "4ywPwVlpRx": {
+      "type": {"resolvedName": "Image"},
+      "isCanvas": false,
+      "props": {
+        "src": "http://placekitten.com/480/320",
+        "alt": "New image",
+        "width": 480,
+        "height": 320
+      },
+      "displayName": "Image",
+      "custom": {},
+      "parent": "ROOT",
+      "hidden": false,
+      "nodes": [],
+      "linkedNodes": {}
+    },
+    "7x2Ojp2mEO": {
+      "type": {"resolvedName": "Card"},
+      "isCanvas": false,
+      "props": {},
+      "displayName": "Card",
+      "custom": {},
+      "parent": "ROOT",
+      "hidden": false,
+      "nodes": [],
+      "linkedNodes": {"text": "ZQ7vchrm-Q", "buttons": "M7gF482u0Z"}
+    },
+    "ZQ7vchrm-Q": {
+      "type": {"resolvedName": "CardTop"},
+      "isCanvas": true,
+      "props": {"data-cy": "card-top"},
+      "displayName": "CardTop",
+      "custom": {},
+      "parent": "7x2Ojp2mEO",
+      "hidden": false,
+      "nodes": ["vFvrkAP33M", "S4GRWTP_DU"],
+      "linkedNodes": {}
+    },
+    "vFvrkAP33M": {
+      "type": {"resolvedName": "Text"},
+      "isCanvas": false,
+      "props": {"text": "Only texts", "fontSize": 20, "data-cy": "card-top-text-1"},
+      "displayName": "Text",
+      "custom": {},
+      "parent": "ZQ7vchrm-Q",
+      "hidden": false,
+      "nodes": [],
+      "linkedNodes": {}
+    },
+    "S4GRWTP_DU": {
+      "type": {"resolvedName": "Text"},
+      "isCanvas": false,
+      "props": {
+        "text": "are allowed up here",
+        "fontSize": 15,
+        "data-cy": "card-top-text-2"
+      },
+      "displayName": "Text",
+      "custom": {},
+      "parent": "ZQ7vchrm-Q",
+      "hidden": false,
+      "nodes": [],
+      "linkedNodes": {}
+    },
+    "M7gF482u0Z": {
+      "type": {"resolvedName": "CardBottom"},
+      "isCanvas": true,
+      "props": {"data-cy": "card-bottom"},
+      "displayName": "CardBottom",
+      "custom": {},
+      "parent": "7x2Ojp2mEO",
+      "hidden": false,
+      "nodes": ["vnAlx0zmrv"],
+      "linkedNodes": {}
+    },
+    "vnAlx0zmrv": {
+      "type": {"resolvedName": "Button"},
+      "isCanvas": false,
+      "props": {
+        "text": "Only buttons down here",
+        "size": "small",
+        "data-cy": "card-bottom-button"
+      },
+      "displayName": "Button",
+      "custom": {},
+      "parent": "M7gF482u0Z",
+      "hidden": false,
+      "nodes": [],
+      "linkedNodes": {}
+    }
+  },
+  "metadata": {
+    "id": "6571ff4e12a5d37659a4856a",
+    "private": false,
+    "createdAt": "2023-12-07T17:22:22.641Z"
+  }
+}
